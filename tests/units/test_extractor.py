@@ -5,7 +5,7 @@ from src.lifen_challenge.models import Document, Patient, Word, BBox, Page
 from src.lifen_challenge.extractor import SimplePatientExtractor
 
 
-# A pytest fixture makes it easy to reuse the extractor instance
+# fixture that makes it easy to reuse the extractor instance
 @pytest.fixture
 def extractor():
     return SimplePatientExtractor()
@@ -15,7 +15,7 @@ def test_extract_patient_with_keyword(extractor):
     """
     Tests the happy path: a patient name is found next to a keyword.
     """
-    # Create a mock document object that simulates the "Hugo Victor" case
+    # mock document creation
     doc = Document(
         pages=[
             Page(
@@ -47,7 +47,7 @@ def test_no_patient_found_without_keyword(extractor):
     """
     Tests the graceful failure path: no keyword is present.
     """
-    # Create a mock document object that simulates the "Juliette Martin" case
+    # mock document creation
     doc = Document(
         pages=[
             Page(
@@ -73,7 +73,7 @@ def test_no_patient_found_without_keyword(extractor):
         ]
     )
 
-    # The heuristic should fail and return an empty Patient object
+    # heuristic should fail and return an empty Patient object
     expected_patient = Patient()
     result = extractor.extract(doc)
 

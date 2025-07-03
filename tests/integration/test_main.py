@@ -1,7 +1,7 @@
 # tests/test_main.py
 
 from fastapi.testclient import TestClient
-from src.lifen_challenge.main import app  # Import your FastAPI app instance
+from src.lifen_challenge.main import app
 
 client = TestClient(app)
 
