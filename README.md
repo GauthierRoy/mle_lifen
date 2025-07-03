@@ -1,14 +1,10 @@
-Of course. Here is a very simple and straightforward `README.md` file that covers the essential information and reserves a section for future improvements, as requested.
-
----
-
 # Lifen Machine Learning Engineer Challenge - Patient Name Extraction
 
 This repository contains a solution for Part A.1 of the Lifen ML Engineer challenge. It implements a simple, rule-based heuristic to extract a patient's name from a medical document and serves it via a minimal FastAPI web service.
 
 ## Setup
 
-This project uses [Poetry](https://python-poetry.org/) for dependency management.
+This project uses Poetry for dependency management.
 
 1.  **Clone the repository:**
     ```bash
@@ -33,14 +29,14 @@ poetry run uvicorn src.lifen_challenge.main:app --reload
 
 The API will be available at `http://127.0.0.1:8000`.
 
-You can access the interactive API documentation (Swagger UI) at `http://127.0.0.1:8000/docs` to test the endpoint.
+You can access the interactive API documentation at `http://127.0.0.1:8000/docs` to test the endpoint.
 
 ### Running Tests
 
 The project includes both unit and integration tests. To run the full test suite:
 
 ```bash
-poetry run pytest
+poetry run python -m pytest tests
 ```
 
 ## Future Improvements
