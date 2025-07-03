@@ -8,8 +8,8 @@ This project uses Poetry for dependency management.
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repository-url>
-    cd <repository-name>
+    git clone https://github.com/GauthierRoy/mle_lifen
+    cd mle_lifen
     ```
 
 2.  **Install dependencies:**
